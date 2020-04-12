@@ -8,6 +8,9 @@ const Layout = ({children}) => {
       <li className="nav-item">
         <Link href="/" className="text-white nav-link">Home</Link>
       </li>
+      <li className="nav-item">
+        <Link href="/" className="text-white nav-link">About</Link>
+      </li>
 
       <Fragment>
         <li className="nav-item">
