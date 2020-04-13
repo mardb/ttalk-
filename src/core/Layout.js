@@ -6,24 +6,19 @@ const Layout = ({children}) => {
   const nav = () => (
     <ul className="nav nav-tabs bg-secondary ">
       <li className="nav-item">
-        <Link href="/" className="text-white nav-link">Home</Link>
+        <Link to="/" className="text-white nav-link">Home</Link>
       </li>
       <li className="nav-item">
-        <Link href="/" className="text-white nav-link">About</Link>
+        <Link to="/signup" className="text-white nav-link">Signup</Link>
       </li>
-
-      <Fragment>
-        <li className="nav-item">
-            <Link to="/signin" className="nav-link text-light">
-                Signin
-            </Link>
-        </li>
+      <li className="nav-item">
+        <Link to="/about" className="text-white nav-link">About</Link>
+      </li>
         <li className="nav-item">
             <Link to="/signup" className="nav-link text-white">
                 Signup
             </Link>
         </li>
-      </Fragment>
     </ul>
     
   )
