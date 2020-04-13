@@ -16,6 +16,7 @@ return(
   <div className="col-md-6 offset-md-3">
       <ToastContainer />
       <h1 className="p-5 text-center">About</h1>
+      <p>Created and curated for women by women.</p>
   </div>
 </Layout>
 )
