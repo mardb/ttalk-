@@ -8,9 +8,7 @@ const Layout = ({children}) => {
       <li className="nav-item">
         <Link to="/" className="text-white nav-link">Home</Link>
       </li>
-      <li className="nav-item">
-        <Link to="/about" className="text-white nav-link">About</Link>
-      </li>
+      
       <li className="nav-item">
         <Link to="/signup" className="text-white nav-link">Signup</Link>
       </li>
