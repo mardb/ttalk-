@@ -1,6 +1,9 @@
 /* temporary CSS  */
 @import url(//fonts.googleapis.com/css?family=Pacifico);
-
+.container{
+  background: rgb(247,231,231);
+  background: linear-gradient(90deg, rgba(247,231,231,1) 0%, rgba(255,242,211,1) 10%, rgba(254,255,219,1) 23%, rgba(214,255,212,1) 37%, rgba(221,255,255,1) 52%, rgba(228,240,255,1) 68%, rgba(228,213,242,1) 87%, rgba(249,212,231,1) 100%);
+}
 .body {
   min-height: 100vh;
   padding-top: 5rem;
