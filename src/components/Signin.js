@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+// import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import Layout from "../core/Layout";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-
+// import { set } from "mongoose";
 
 const Signin = () => {
   const [values, setValues] = useState({
@@ -85,4 +86,3 @@ const Signin = () => {
 };
 
 export default Signin;
-// ***

@@ -1,19 +1,28 @@
 //fragment allows multiple react elements  in jsx
 import React, {Fragment} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, withRouter } from 'react-router-dom';
 
-const Layout = ({children}) => {
+const Layout = ({match, children}) => {
+  //path compares to history 
+  const isActive = path => {
+    if(match.path === path){
+      return{color: '#000'}
+    } else {
+      return {color: '#fff'}
+    }
+  }
+
   const nav = () => (
     <ul className="nav nav-tabs bg-secondary ">
       <li className="nav-item">
-        <Link to="/" className="text-white nav-link">Home</Link>
+        <Link to="/" className=" nav-link" style={isActive('/')} >Home</Link>
       </li>
       
       <li className="nav-item">
-        <Link to="/signup" className="text-white nav-link">Signup</Link>
+        <Link to="/signup" className="nav-link" style={isActive('/signup')} >Signup</Link>
       </li>
       <li className="nav-item">
-        <Link to="/signin" className="nav-link text-white">Signin</Link>
+        <Link to="/signin" className="nav-link " style={isActive('/signin')} >Signin</Link>
       </li>
     </ul>
     
@@ -29,4 +38,4 @@ const Layout = ({children}) => {
   )
 }
 
-export default Layout;
+export default withRouter(Layout);

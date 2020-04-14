@@ -4,7 +4,8 @@ import App from '../App';
 import Signup from '../components/Signup';
 import About from '../components/About';
 import Signin from '../components/Signin';
-import Activate from '../components/Activate';
+import Activate from '../core/Activate';
+import UserSignedinHome from '../core/UserSignedinHome';
 
 const Routes = () => {
   return(
@@ -15,6 +16,7 @@ const Routes = () => {
           <Route path="/signup" exact component= {Signup}/>
           <Route path="/signin" exact component= {Signin}/>
           <Route path="/auth/activate/:token" exact component= {Activate}/>
+          <Route path="/usersignedinhome" exact component= {UserSignedinHome}/>
           {/* <Route path="/signout" exact component= {Signout}/> */}
         </Switch>
       </BrowserRouter>
