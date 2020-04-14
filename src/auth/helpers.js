@@ -44,6 +44,18 @@ export const authenticate = (response, next) => {
   next();
 }
 // auth user during sign in 
-
+export const isAuth = () => {
+  if(window !== 'undefined') {
+    const cookieChecked = getCookie('token');
+    if(cookieChecked) {
+      if(localStorage.getItem('user')) {
+        return JSON.parse(localstorage.getItem('user'));
+      } else {
+        return false;
+      }
+    }
+  }
+};
 //  retrieve user info 
+
 
