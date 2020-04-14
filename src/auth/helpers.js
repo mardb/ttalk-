@@ -1,7 +1,13 @@
 import cookie from 'js-cookie'
 
 //save cookie in browser cookie 
-
+export const setCookie = (key, value) => {
+  if(window !== 'undefined') {
+    cookie.set(key, value, {
+      expires: 1 //1 day
+    })
+  }
+}
 //signs user out and removes browser cook 
 
 //stored stoke
@@ -15,3 +21,4 @@ import cookie from 'js-cookie'
 // auth user during sign in 
 
 //  retrieve user info 
+
