@@ -37,7 +37,13 @@ export const removeLocalStorage = (key) =>{
   }
 }
 //delete local storage
-
+export const authenticate = (response, next) => {
+  console.log('Authentication response:', response);
+  setCookie('token', response.data.token)
+  setLocalStorage('user',response.data.user)
+  next();
+}
 // auth user during sign in 
 
 //  retrieve user info 
+
