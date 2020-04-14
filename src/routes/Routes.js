@@ -4,7 +4,7 @@ import App from '../App';
 import Signup from '../components/Signup';
 import About from '../components/About';
 import Signin from '../components/Signin';
-import Activate from '../core/Activate';
+import Activate from '../components/Activate';
 import UserSignedinHome from '../core/UserSignedinHome';
 
 const Routes = () => {

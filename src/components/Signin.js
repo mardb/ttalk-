@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Layout from "../core/Layout";
 import { ToastContainer, toast } from "react-toastify";
+import { authenticate } from "../auth/helpers";
 import "react-toastify/dist/ReactToastify.min.css";
 // import { set } from "mongoose";
 
@@ -29,16 +30,16 @@ const Signin = () => {
     })
       .then((response) => {
         console.log("You have successfully signed in!", response);
-
-
-        setValues({
-          ...values,
-          name: "",
-          email: "",
-          password: "",
-          buttonText: "Submitted",
+        authenticate(response, () => {
+          setValues({
+            ...values,
+            name: "",
+            email: "",
+            password: "",
+            buttonText: "Submitted",
+          });
+          toast.success(`Hi ${response.data.user.name}, Welcome back!`);
         });
-        toast.success(`Hi ${response.data.user.name}, Welcome back!`);
       })
       .catch((error) => {
         console.log("There was an error signing in!", error.response.data);

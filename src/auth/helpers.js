@@ -11,14 +11,14 @@ export const setCookie = (key, value) => {
 //signs user out and removes browser cook 
 export const removeCookie = (key) =>{
   if(window !== 'undefined') {
-    cookie.remove(Key, {
+    cookie.remove(key, {
       expires: 1 //expires in one day
     })
   }
 }
 //stored stoke
 
-export const getCookie = () =>{
+export const getCookie = (key) =>{
   if(window !== 'undefined'){
     return cookie.get(key)
   }
@@ -27,13 +27,14 @@ export const getCookie = () =>{
 //token request to server
 export const setLocalStorage = (key, value) =>{
   if(window !== 'undefined'){
-    LocalStorage.setItem(key, JSON.stringify(value))
+    localStorage.setItem(key, JSON.stringify(value))
+    
   }
 }
 //local storage
 export const removeLocalStorage = (key) =>{
   if(window !== 'undefined'){
-    LocalStorage.removeItem(key)
+    localStorage.removeItem(key)
   }
 }
 //delete local storage
@@ -44,18 +45,20 @@ export const authenticate = (response, next) => {
   next();
 }
 // auth user during sign in 
+//middlware
 export const isAuth = () => {
   if(window !== 'undefined') {
     const cookieChecked = getCookie('token');
     if(cookieChecked) {
       if(localStorage.getItem('user')) {
-        return JSON.parse(localstorage.getItem('user'));
+        return JSON.parse(localStorage.getItem('user'));
       } else {
         return false;
       }
     }
   }
 };
-//  retrieve user info 
+//  retrieve user info when leaving session
+
 
 
