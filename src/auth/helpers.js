@@ -9,7 +9,13 @@ export const setCookie = (key, value) => {
   }
 }
 //signs user out and removes browser cook 
-
+export const removeCookie = (key) =>{
+  if(window !== 'undefined') {
+    cookie.remove(Key, {
+      expires: 1 //expires in one day
+    })
+  }
+}
 //stored stoke
 
 //token request to server
