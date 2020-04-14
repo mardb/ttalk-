@@ -25,7 +25,11 @@ export const getCookie = () =>{
 }
 
 //token request to server
-
+export const setLocalStorage = (key, value) =>{
+  if(window !== 'undefined'){
+    LocalStorage.setItem(key, JSON.stringify(value))
+  }
+}
 //local storage
 
 //delete local storage
