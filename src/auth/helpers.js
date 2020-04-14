@@ -31,11 +31,13 @@ export const setLocalStorage = (key, value) =>{
   }
 }
 //local storage
-
+export const removeLocalStorage = (key) =>{
+  if(window !== 'undefined'){
+    LocalStorage.removeItem(key)
+  }
+}
 //delete local storage
 
 // auth user during sign in 
 
 //  retrieve user info 
-
-
