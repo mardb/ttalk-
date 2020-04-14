@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import Layout from "../core/Layout";
 import { ToastContainer, toast } from "react-toastify";
-import { authenticate } from "../auth/helpers";
+import { authenticate, isAuth} from "../auth/helpers";
 import "react-toastify/dist/ReactToastify.min.css";
+import { Redirect } from "react-router-dom";
 // import { set } from "mongoose";
 
 const Signin = () => {
@@ -79,9 +80,11 @@ const Signin = () => {
     <Layout>
       <div className="col-md-6 offset-md-3">
         <ToastContainer />
+        {isAuth() ? <Redirect to='/' /> : null}
         <h1 className="p-5 text-center">Signin</h1>
         {signinForm()}
       </div>
+      {/* {JSON.stringify(isAuth())} */}
     </Layout>
   );
 };
