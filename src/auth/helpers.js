@@ -18,6 +18,12 @@ export const removeCookie = (key) =>{
 }
 //stored stoke
 
+export const getCookie = () =>{
+  if(window !== 'undefined'){
+    return cookie.get(key)
+  }
+}
+
 //token request to server
 
 //local storage
@@ -27,4 +33,5 @@ export const removeCookie = (key) =>{
 // auth user during sign in 
 
 //  retrieve user info 
+
 
