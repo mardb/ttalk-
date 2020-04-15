@@ -58,7 +58,11 @@ export const isAuth = () => {
     }
   }
 };
-//  retrieve user info when leaving session
+//  retrieve user info when leaving session -remove middleware
 
-
+export const signout = next => {
+  removeCookie('token')
+  removeLocalStorage('user')
+  next()
+}
 
