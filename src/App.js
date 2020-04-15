@@ -7,13 +7,13 @@ const App = () => {
     <div className="App">
       <Layout/>
     <div className="body">
-    <div class="tinkle">
+    <div className="tinkle">
       Com<span>in</span>g 
     
-      <span class="delay"> So</span>on..<span>.</span><br />
+      <span className="delay"> So</span>on..<span>.</span><br />
     </div>
-    <div class="welcome">
-      <span class="delay" id="welcome">Thank You For Your Patience...</span>
+    <div className="welcome">
+      <span className="delay" id="welcome">Thank You For Your Patience...</span>
     </div>
       </div>
     </div>

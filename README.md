@@ -1,3 +1,7 @@
+
+<img src="../client/public/Comingsoon.gif" alt="" style="max-width:60%;" /> 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
