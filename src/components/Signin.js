@@ -39,7 +39,7 @@ const Signin = ({history}) => {
             buttonText: "Submitted",
           });
           // toast.success(`Hi ${response.data.user.name}, Welcome back!`);
-          isAuth() && isAuth().role === 'subscriber' ? history.push('/private') : history.push('/signup');
+          isAuth() && isAuth().role === 'subscriber' ? history.push('/private') : history.push('/');
         });
       })
       .catch((error) => {
