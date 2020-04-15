@@ -7,7 +7,7 @@ import { authenticate, isAuth} from "../auth/helpers";
 import "react-toastify/dist/ReactToastify.min.css";
 // import { set } from "mongoose";
 
-const Signin = () => {
+const Signin = ({history}) => {
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -38,7 +38,8 @@ const Signin = () => {
             password: "",
             buttonText: "Submitted",
           });
-          toast.success(`Hi ${response.data.user.name}, Welcome back!`);
+          // toast.success(`Hi ${response.data.user.name}, Welcome back!`);
+          isAuth() && isAuth().role === 'subscriber' ? history.push('/private') : history.push('/signup');
         });
       })
       .catch((error) => {
