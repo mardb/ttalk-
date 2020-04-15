@@ -7,6 +7,7 @@ import Signin from '../components/Signin';
 import Activate from '../components/Activate';
 // import UserSignedinHome from '../core/UserSignedinHome';
 import PrivateRoute from '../components/PrivateRoute';
+import Private from '../core/Private'
 
 const Routes = () => {
   return(
@@ -19,7 +20,7 @@ const Routes = () => {
           <Route path="/auth/activate/:token" exact component= {Activate}/>
           {/* <Route path="/usersignedinhome" exact component= {UserSignedinHome}/> */}
           {/* <Route path="/signout" exact component= {Signout}/> */}
-          <PrivateRoute/>
+          <PrivateRoute  path="/private" exact component={Private} />
         </Switch>
       </BrowserRouter>
 
