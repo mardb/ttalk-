@@ -41,18 +41,25 @@ const Layout = ({ match, children, history }) => {
         </Fragment>
       )}
 
+
+{isAuth() && (
+        <li className="nav-item">
+          <span className='nav-link'> {isAuth().name} </span>
+        </li>
+      )}
+
       {isAuth() && (
         <li className="nav-item">
-            <span
-              className="nav-link"
-              style={{ cursor: 'pointer', color: '#ff00de' }}
-              onClick={() => {
+          <span
+            className="nav-link"
+            style={{ cursor: "pointer", color: "#ff00de" }}
+            onClick={() => {
               signout(() => {
-              history.push('/');
-                  });
-              }}
-            >
-              Signout
+                history.push("/");
+              });
+            }}
+          >
+            Signout
           </span>
         </li>
       )}
