@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "./Layout";
+import Posts from '../post/Posts'
 
 const Private = () => (
   <Layout>
@@ -11,6 +12,7 @@ const Private = () => (
       </div>
       <div className="container">
         <h1>Posts will go here</h1>
+        <Posts/>
       </div>
     </div>
   </Layout>
