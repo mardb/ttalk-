@@ -17,8 +17,10 @@ const Layout = ({match, children}) => {
       <li className="nav-item">
         <Link to="/" className=" nav-link" style={isActive('/')} >Home</Link>
       </li>
+
     {!isAuth() && (
-      <div>   {/* can use Fragment too if styling messes up */}
+      <Fragment>
+      {/* <div>   can use Fragment too if styling messes up */}
       <li className="nav-item">
         <Link to="/signin" className="nav-link " style={isActive('/signin')} >Signin</Link>
       </li>
@@ -26,8 +28,9 @@ const Layout = ({match, children}) => {
       <li className="nav-item">
         <Link to="/signup" className="nav-link" style={isActive('/signup')} >Signup</Link>
       </li>
+      </Fragment>
         )}
-        </div>
+       
     </ul>
     
   )
