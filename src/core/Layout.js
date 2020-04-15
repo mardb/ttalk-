@@ -1,7 +1,7 @@
 //fragment allows multiple react elements  in jsx
 import React, {Fragment} from 'react';
 import {Link, withRouter } from 'react-router-dom';
-
+import {isAuth} from '../auth/helpers'
 const Layout = ({match, children}) => {
   //path compares to history 
   const isActive = path => {
@@ -17,13 +17,17 @@ const Layout = ({match, children}) => {
       <li className="nav-item">
         <Link to="/" className=" nav-link" style={isActive('/')} >Home</Link>
       </li>
+    {!isAuth() && (
+      <div>   {/* can use Fragment too if styling messes up */}
+      <li className="nav-item">
+        <Link to="/signin" className="nav-link " style={isActive('/signin')} >Signin</Link>
+      </li>
       
       <li className="nav-item">
         <Link to="/signup" className="nav-link" style={isActive('/signup')} >Signup</Link>
       </li>
-      <li className="nav-item">
-        <Link to="/signin" className="nav-link " style={isActive('/signin')} >Signin</Link>
-      </li>
+        )}
+        </div>
     </ul>
     
   )
