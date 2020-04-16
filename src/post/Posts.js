@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 class Posts extends React.Component {
   render() {
     return (
+      <div>
       <div className="card col-md-4">
         <div className="card-body">
           <img
@@ -16,14 +17,16 @@ class Posts extends React.Component {
           <br />
           <p className="font-italic mark">
             Posted by Martha Stewart
-            <Link to="">Link to Post</Link>
+            <Link to=""> Link to Post </Link>
             on 4/15/2020
           </p>
           <Link to="" className="btn btn-raised btn-primary btn-sm">
             Read more
           </Link>
         </div>
+        </div>
         {/* -----------------DELETE BELOw LATER-------------- */}
+        <div className="card col-md-4">
         <div className="card-body">
           <img
             src=""
@@ -34,17 +37,18 @@ class Posts extends React.Component {
           <p className="card-text">POST BODY</p>
           <br />
           <p className="font-italic mark">
-            Posted by Martha Stewart
-            <Link to="">Link to Post</Link>
+            Posted by Snoop Dogg
+            <Link to=""> Link to Post </Link>
             on 4/15/2020
           </p>
           <Link to="" className="btn btn-raised btn-primary btn-sm">
             Read more
           </Link>
         </div>
+         </div>
           {/* =============DELETE ABOVE LATER======= */}
 
-
+         
       </div>
     );
   }
