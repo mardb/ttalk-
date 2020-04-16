@@ -5,6 +5,8 @@ import Layout from "../core/Layout";
 import { ToastContainer, toast } from "react-toastify";
 import {isAuth } from '../auth/helpers'
 import "react-toastify/dist/ReactToastify.min.css";
+import { css } from 'glamor';
+
 
 const Signup = () => {
   const [values, setValues] = useState({
@@ -44,7 +46,17 @@ const Signup = () => {
       .catch((error) => {
         console.log("There was an error signing up.", error.response.data);
         setValues({ ...values, buttonText: "Submit" });
-        toast.error(error.response.data.error);
+        toast.error(error.response.data.error, {
+          className: css({
+            background: 'black'
+          }),
+          bodyClassName: css({
+            fontSize: '60px'
+          }),
+          progressClassName: css({
+            background: "repeating-radial-gradient(circle at center, red 0, blue, green 30px)"
+          })
+        });
       });
   };
 

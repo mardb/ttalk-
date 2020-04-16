@@ -13,6 +13,7 @@
     "dotenv": "^8.2.0",
     "express-jwt": "^5.3.3",
     "express-validator": "^6.4.0",
+    "glamor": "^2.20.40",
     "google-auth-library": "^6.0.0",
     "js-cookie": "^2.2.1",
     "jsonwebtoken": "^8.5.1",

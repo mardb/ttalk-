@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { authenticate, isAuth} from "../auth/helpers";
 import "react-toastify/dist/ReactToastify.min.css";
 // import { set } from "mongoose";
+import {css} from 'glamor'
 
 const Signin = ({history}) => {
   const [values, setValues] = useState({
@@ -45,7 +46,18 @@ const Signin = ({history}) => {
       .catch((error) => {
         console.log("There was an error signing in!", error.response.data);
         setValues({ ...values, buttonText: "Submit" });
-        toast.error(error.response.data.error);
+        toast.error(error.response.data.error, {
+          className: css({
+            background: 'rgba(221,255,255,1)'
+          }),
+          bodyClassName: css({
+            fontSize: '12px',
+            color: 'black'
+          }),
+          progressClassName: css({
+            background: "repeating-radial-gradient(circle at center,  rgba(221,255,255,1) 52%, rgba(228,240,255,1) 68%, rgba(228,213,242,1) 87%, rgba(249,212,231,1) 100%  30px)"
+          })
+        });
       });
   };
 
