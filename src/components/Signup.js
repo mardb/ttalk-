@@ -48,10 +48,11 @@ const Signup = () => {
         setValues({ ...values, buttonText: "Submit" });
         toast.error(error.response.data.error, {
           className: css({
-            background: 'black'
+            background: 'pink',
+            color: 'white'
           }),
           bodyClassName: css({
-            fontSize: '60px'
+            fontSize: '12px'
           }),
           progressClassName: css({
             background: "repeating-radial-gradient(circle at center, red 0, blue, green 30px)"
