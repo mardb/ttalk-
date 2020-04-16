@@ -12,13 +12,14 @@ import {css} from 'glamor';
 
 const Private = () => {
   const [values, setValues] = useState({
-    name: "marlene",
-    email: "marleneguzmanla@gmail.com",
+    role:"",
+    name: "mar",
+    email: "guzmanmarlene@yhaoo.com",
     password: "111111",
     buttonText: "Submit",
   });
 
-  const { name, email, password, buttonText } = values;
+  const { role, name, email, password, buttonText } = values;
 
   const handleChange = (name) => (event) => {
     console.log(event.target.value);
@@ -65,6 +66,14 @@ const Private = () => {
   const updateForm = () => (
     <form>
       <div className="form-group">
+        <label className="text-muted">Role</label>
+        <input
+          type="text"
+          className="form-control"
+          value={role}
+        />
+      </div>
+      <div className="form-group">
         <label className="text-muted">Name</label>
         <input
           type="text"
@@ -79,7 +88,6 @@ const Private = () => {
         <input
           type="email"
           className="form-control"
-          onChange={handleChange("email")}
           value={email}
         />
       </div>
