@@ -29,7 +29,7 @@ const Activate = ({match}) => {
     event.preventDefault();
     axios({
       method: "POST",
-      url: `${process.env.REACT_APP_API}/signup/account-activation`,
+      url: `${process.env.REACT_APP_API}/account-activation`,
       data: {token}
     })
       .then((response) => {
@@ -43,12 +43,9 @@ const Activate = ({match}) => {
       })
       .catch((error) => {
         console.log("There was an error activating your account.", error.response.data.error);
-        toast.error(error.response.data.error, {
-          //enter css for toast
-        });
+        toast.error(error.response.data.error);
       });
-  };
-
+};
   const activationLink= () => (
     <div className="text-center">
        <h1 className="p-5">Hi {name}, Please activate Account by clicking the Activate Account button. </h1>

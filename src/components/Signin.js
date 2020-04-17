@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import {  Redirect, Link } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import axios from "axios";
 import Layout from "../core/Layout";
 import { ToastContainer, toast } from "react-toastify";
-import { authenticate, isAuth} from "../auth/helpers";
+import { authenticate, isAuth } from "../auth/helpers";
 import "react-toastify/dist/ReactToastify.min.css";
-import Google from '../auth/GoogleAuth'
+import Google from "../auth/GoogleAuth";
 // import { set } from "mongoose";
-import {css} from 'glamor'
+import { css } from "glamor";
 
-const Signin = ({history}) => {
+const Signin = ({ history }) => {
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -22,11 +22,13 @@ const Signin = ({history}) => {
     setValues({ ...values, [name]: event.target.value });
   };
 
-  const informParent = response => {
-    authenticate(response,() => {
-      isAuth() && isAuth().role ==='private' ? history.push('/private') : console.log('please chec inform parent error')
+  const informParent = (response) => {
+    authenticate(response, () => {
+      isAuth() && isAuth().role === "private"
+        ? history.push("/private")
+        : console.log("please chec inform parent error");
     });
-  }
+  };
 
   const clickSubmit = (event) => {
     event.preventDefault();
@@ -47,7 +49,9 @@ const Signin = ({history}) => {
             buttonText: "Submitted",
           });
           // toast.success(`Hi ${response.data.user.name}, Welcome back!`);
-          isAuth() && isAuth().role === 'subscriber' ? history.push('/private') : history.push('/');
+          isAuth() && isAuth().role === "subscriber"
+            ? history.push("/private")
+            : history.push("/");
         });
       })
       .catch((error) => {
@@ -55,16 +59,17 @@ const Signin = ({history}) => {
         setValues({ ...values, buttonText: "Submit" });
         toast.error(error.response.data.error, {
           className: css({
-            background: 'rgb(247,231,231)',
-            color: 'red'
+            background: "rgb(247,231,231)",
+            color: "red",
           }),
           bodyClassName: css({
-            fontSize: '12px',
-            color: 'black'
+            fontSize: "12px",
+            color: "black",
           }),
           progressClassName: css({
-            background: "repeating-radial-gradient(circle at center,  rgba(221,255,255,1) 52%, rgba(228,240,255,1) 68%, rgba(228,213,242,1) 87%, rgba(249,212,231,1) 100%  30px)"
-          })
+            background:
+              "repeating-radial-gradient(circle at center,  rgba(221,255,255,1) 52%, rgba(228,240,255,1) 68%, rgba(228,213,242,1) 87%, rgba(249,212,231,1) 100%  30px)",
+          }),
         });
       });
   };
@@ -102,10 +107,13 @@ const Signin = ({history}) => {
         <ToastContainer />
         {isAuth() ? <Redirect to="/" /> : null}
         <h1 className="p-5 text-center">Signin</h1>
-        <Google informParent={informParent}/>
+        <Google informParent={informParent} />
         {signinForm()}
-        <br/>
-        <Link className="btn btn-outline-danger" to="/auth/forgot-password" > Forgot Password </Link>
+        <br />
+        <Link className="btn btn-outline-danger" to="/auth/forgot-password">
+          {" "}
+          Forgot Password{" "}
+        </Link>
       </div>
       {/* {JSON.stringify(isAuth())} */}
     </Layout>
