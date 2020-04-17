@@ -9,6 +9,7 @@ import Activate from "../components/Activate";
 import PrivateRoute from "../components/PrivateRoute";
 import Private from "../core/Private";
 import ForgotPassword from '../components/ForgotPassword'
+import ResetPassword from '../components/ResetPassword'
 
 const Routes = () => {
   return (
@@ -23,6 +24,7 @@ const Routes = () => {
         {/* <Route path="/signout" exact component= {Signout}/> */}
         <PrivateRoute path="/private" exact component={Private} />
         <Route path='/auth/forgot-password' exact component={ForgotPassword} />
+        <Route path='/auth/reset-password' exact component={ResetPassword} />
       </Switch>
     </BrowserRouter>
   );
