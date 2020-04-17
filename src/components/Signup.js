@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import {Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 import Layout from "../core/Layout";
 import { ToastContainer, toast } from "react-toastify";
 import {isAuth } from '../auth/helpers'
@@ -109,6 +109,8 @@ const Signup = () => {
         {isAuth() ? <Redirect to='/' /> : null}
         <h1 className="p-5 text-center">Signup</h1>
         {signupForm()}
+        <br/>
+        <Link className="btn btn-sm btn-outline-danger" to="/auth/forgot-password" > Forgot Password </Link>
       </div>
     </Layout>
   );
