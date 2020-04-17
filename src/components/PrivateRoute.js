@@ -7,7 +7,7 @@ import { isAuth } from "../auth/helpers";
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
-    render={props =>
+    render={(props) =>
       isAuth() ? (
         <Component {...props} />
       ) : (
