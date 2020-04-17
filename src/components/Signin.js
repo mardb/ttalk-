@@ -5,6 +5,7 @@ import Layout from "../core/Layout";
 import { ToastContainer, toast } from "react-toastify";
 import { authenticate, isAuth} from "../auth/helpers";
 import "react-toastify/dist/ReactToastify.min.css";
+import Google from '../auth/GoogleAuth'
 // import { set } from "mongoose";
 import {css} from 'glamor'
 
@@ -20,6 +21,12 @@ const Signin = ({history}) => {
   const handleChange = (name) => (event) => {
     setValues({ ...values, [name]: event.target.value });
   };
+
+  const informParent = response => {
+    authenticate(response,() => {
+      isAuth() && isAuth().role ==='private' ? history.push('/private') : console.log('please chec inform parent error')
+    });
+  }
 
   const clickSubmit = (event) => {
     event.preventDefault();
@@ -95,6 +102,7 @@ const Signin = ({history}) => {
         <ToastContainer />
         {isAuth() ? <Redirect to="/" /> : null}
         <h1 className="p-5 text-center">Signin</h1>
+        <Google informParent={informParent}/>
         {signinForm()}
         <br/>
         <Link className="btn btn-outline-danger" to="/auth/forgot-password" > Forgot Password </Link>
