@@ -48,7 +48,8 @@ const Signin = ({history}) => {
         setValues({ ...values, buttonText: "Submit" });
         toast.error(error.response.data.error, {
           className: css({
-            background: 'rgba(221,255,255,1)'
+            background: 'rgb(247,231,231)',
+            color: 'red'
           }),
           bodyClassName: css({
             fontSize: '12px',

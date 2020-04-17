@@ -91,7 +91,7 @@ class Posts extends React.Component {
         </div>
         </div>
 
-        <div className="card col-md-4">
+        <div className="card col-md-4 ">
         <div className="card-body">
           <img
             src={require("../images/comingsoon.png")}

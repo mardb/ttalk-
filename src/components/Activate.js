@@ -43,7 +43,9 @@ const Activate = ({match}) => {
       })
       .catch((error) => {
         console.log("There was an error activating your account.", error.response.data.error);
-        toast.error(error.response.data.error);
+        toast.error(error.response.data.error, {
+          //enter css for toast
+        });
       });
   };
 
