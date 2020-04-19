@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 import Layout from "../core/Layout";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-
+import {css} from 'glamor'
 const Activate = ({match}) => {
   const [values, setValues] = useState({
     name: "",
@@ -39,11 +39,37 @@ const Activate = ({match}) => {
           ...values,
           show: false,
         });
-        toast.success(response.data.message);
+        toast.success(response.data.message,  {
+          className: css({
+            color: "#155724",
+            background: "#d4edda",
+            border: "#c3e6cb",
+            borderRadius: 4,
+          }),
+          bodyClassName: css({
+            fontSize: "12px",
+          }),
+          progressClassName: css({
+            background: "#155724",
+          }),
+        });
       })
       .catch((error) => {
         console.log("There was an error activating your account.", error.response.data.error);
-        toast.error(error.response.data.error);
+        toast.error(error.response.data.error, {
+          className: css({
+            color: "#721c24",
+    background: "#f8d7da",
+    border: "#f5c6cb",
+    borderRadius: 4,
+          }),
+          bodyClassName: css({
+            fontSize: '12px'
+          }),
+          progressClassName: css({
+            background: "#721c24"
+          })
+        });
       });
 };
   const activationLink= () => (

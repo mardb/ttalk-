@@ -48,7 +48,20 @@ const Signin = ({ history }) => {
             password: "",
             buttonText: "Submitted",
           });
-          // toast.success(`Hi ${response.data.user.name}, Welcome back!`);
+          toast.success(`Hi ${response.data.user.name}, Welcome back!`, {
+            className: css({
+              color: "#155724",
+              background: "#d4edda",
+              border: "#c3e6cb",
+              borderRadius: 4,
+            }),
+            bodyClassName: css({
+              fontSize: "12px",
+            }),
+            progressClassName: css({
+              background: "#155724",
+            }),
+          });
           isAuth() && isAuth().role === "subscriber"
             ? history.push("/private")
             : history.push("/");
@@ -59,17 +72,17 @@ const Signin = ({ history }) => {
         setValues({ ...values, buttonText: "Submit" });
         toast.error(error.response.data.error, {
           className: css({
-            background: "rgb(247,231,231)",
-            color: "red",
+            color: "#721c24",
+    background: "#f8d7da",
+    border: "#f5c6cb",
+    borderRadius: 4,
           }),
           bodyClassName: css({
-            fontSize: "12px",
-            color: "black",
+            fontSize: '12px'
           }),
           progressClassName: css({
-            background:
-              "repeating-radial-gradient(circle at center,  rgba(221,255,255,1) 52%, rgba(228,240,255,1) 68%, rgba(228,213,242,1) 87%, rgba(249,212,231,1) 100%  30px)",
-          }),
+            background: "#721c24"
+          })
         });
       });
   };
@@ -115,7 +128,6 @@ const Signin = ({ history }) => {
           Forgot Password{" "}
         </Link>
       </div>
-      {/* {JSON.stringify(isAuth())} */}
     </Layout>
   );
 };

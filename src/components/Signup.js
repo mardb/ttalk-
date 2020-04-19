@@ -41,21 +41,36 @@ const Signup = () => {
           password: "",
           buttonText: "Submitted",
         });
-        toast.success(response.data.message);
+        toast.success(response.data.message, {
+          className: css({
+            color: "#155724",
+            background: "#d4edda",
+            border: "#c3e6cb",
+            borderRadius: 4,
+          }),
+          bodyClassName: css({
+            fontSize: "12px",
+          }),
+          progressClassName: css({
+            background: "#155724",
+          }),
+        });
       })
       .catch((error) => {
         console.log("There was an error signing up.", error.response.data);
         setValues({ ...values, buttonText: "Submit" });
         toast.error(error.response.data.error, {
           className: css({
-            background: 'rgb(247,231,231)',
-            color: 'red'
+            color: "#721c24",
+    background: "#f8d7da",
+    border: "#f5c6cb",
+    borderRadius: 4,
           }),
           bodyClassName: css({
             fontSize: '12px'
           }),
           progressClassName: css({
-            background: "repeating-radial-gradient(circle at center, red 0, blue, green 30px)"
+            background: "#721c24"
           })
         });
       });
@@ -105,7 +120,6 @@ const Signup = () => {
     <Layout>
       <div className="col-md-6 offset-md-3">
         <ToastContainer />
-        {JSON.stringify({ name, email, password })}
         {isAuth() ? <Redirect to='/' /> : null}
         <h1 className="p-5 text-center">Signup</h1>
         {signupForm()}

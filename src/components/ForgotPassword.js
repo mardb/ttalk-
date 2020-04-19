@@ -4,7 +4,7 @@ import Layout from "../core/Layout";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 // import { set } from "mongoose";
-// import {css} from 'glamor'
+import {css} from 'glamor'
 
 const ForgotPassword = ({history}) => {
   const [values, setValues] = useState({
@@ -33,7 +33,20 @@ const ForgotPassword = ({history}) => {
       })
       .catch((error) => {
         console.log("There was an error forgot password :", error.response.data);
-        toast.error(error.response.data.error)
+        toast.error(error.response.data.error, {
+          className: css({
+            color: "#155724",
+            background: "#d4edda",
+            border: "#c3e6cb",
+            borderRadius: 4,
+          }),
+          bodyClassName: css({
+            fontSize: "12px",
+          }),
+          progressClassName: css({
+            background: "#155724",
+          }),
+        })
         setValues({ ...values, buttonText: "Requested" });
       });
   };
@@ -66,7 +79,6 @@ const ForgotPassword = ({history}) => {
         <h1 className="p-5 text-center">Forgot Password </h1>
         {forgotPasswordForm()}
       </div>
-      {/* {JSON.stringify(isAuth())} */}
     </Layout>
   );
 };

@@ -10,6 +10,10 @@ import PrivateRoute from "../components/PrivateRoute";
 import Private from "../core/Private";
 import ForgotPassword from '../components/ForgotPassword'
 import ResetPassword from '../components/ResetPassword'
+import UpdatePrivate from '../components/UpdatePrivate'
+import NewPost from "../post/NewPost";
+import OnePost from '../post/OnePost'
+import { SIGALRM } from "constants";
 
 const Routes = () => {
   return (
@@ -25,6 +29,9 @@ const Routes = () => {
         <PrivateRoute path="/private" exact component={Private} />
         <Route path='/auth/forgot-password' exact component={ForgotPassword} />
         <Route path='/auth/reset-password' exact component={ResetPassword} />
+        <Route path='/private/update-profile' exact component={UpdatePrivate} />
+        <Route path='/private/create-post' exact component={NewPost} />
+        <Route path='/private/single-post' exact component={OnePost}/>
       </Switch>
     </BrowserRouter>
   );

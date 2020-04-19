@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Layout from "./Layout";
-import Posts from '../post/Posts'
+import Posts from "../post/Posts";
 import axios from "axios";
-// import {Redirect} from 'react-router-dom'
-import { ToastContainer, toast } from "react-toastify";
-import { isAuth, getCookie, signout, updateUser } from "../auth/helpers";
+import { Redirect, Link } from "react-router-dom";
+// import { ToastContainer, toast } from "react-toastify";
+// import { isAuth, getCookie, signout, updateUser } from "../auth/helpers";
 import "react-toastify/dist/ReactToastify.min.css";
-import { css } from "glamor";
+import NewPost from "../post/NewPost";
+// import { css } from "glamor";
 
 // const Private = (history) => {
 //   const [values, setValues] = useState({
@@ -74,7 +75,20 @@ import { css } from "glamor";
 //             buttonText: "Submitted",
 //           });
 //         });
-//         toast.success("Your profile has been updated!");
+//         toast.success("Your profile has been updated!",{
+//     className: css({
+//     color: "#155724",
+//     background: "#d4edda",
+//     border: "#c3e6cb",
+//     borderRadius: 4,
+//   }),
+//   bodyClassName: css({
+//     fontSize: "12px",
+//   }),
+//   progressClassName: css({
+//     background: "#155724",
+//   }),
+// });
 //       })
 //       .catch((error) => {
 //         console.log(
@@ -83,18 +97,19 @@ import { css } from "glamor";
 //         );
 //         setValues({ ...values, buttonText: "Submit" });
 //         toast.error(error.response.data.error, {
-//           className: css({
-//             background: "rgb(247,231,231)",
-//             color: "red",
-//           }),
-//           bodyClassName: css({
-//             fontSize: "10px",
-//           }),
-//           progressClassName: css({
-//             background:
-//               "repeating-radial-gradient(circle at center, red 0, blue, green 30px)",
-//           }),
-//         });
+//       className: css({
+//         color: "#721c24",
+// background: "#f8d7da",
+// border: "#f5c6cb",
+// borderRadius: 4,
+//       }),
+//       bodyClassName: css({
+//         fontSize: '12px'
+//       }),
+//       progressClassName: css({
+//         background: "#721c24"
+//       })
+//     });
 //       });
 //   };
 
@@ -151,7 +166,7 @@ import { css } from "glamor";
 //     <Layout>
 //       <div className="col-md-6 offset-md-3">
 //         <ToastContainer />
-//         {JSON.stringify({ name, email, password })}
+//         )}
 //         <h1 className="pt-5 text-center">Private Page</h1>
 //         <p className="lead text-center">Profile Update</p>
 //         {updateForm()}
@@ -163,17 +178,64 @@ import { css } from "glamor";
 // export default Private;
 
 const Private = () => (
-
   <Layout>
-    <h1>I am the signed in user. this is my home page. </h1>
-    <div>
-      <div className="jumbotron text-center">
-        <h2>Home</h2>
-        <p className="lead">Welcome to my Blog</p>
-      </div>
-      <div className="container">
-        <h1>Posts will go here</h1>
-        <Posts/>
+    <div className="container">
+      <h2 className="mt-5 mb-5">Profile</h2>
+      <h1>I am the signed in user. this is my home page. </h1>
+      <div>
+        <div className="jumbotron text-center">
+          <h2>Home</h2>
+          <p className="lead">Welcome to my Blog</p>
+        </div>
+        <div className="row">
+          <div className="col-md-4">
+            <img
+              src={require("../images/imageedit_1_4006947766.png")}
+              style={{ height: "200px", width: "auto" }}
+            />
+          </div>
+
+          <div className="col-md-8">
+            <div className="lead mt-2">
+              <p>
+                Hello
+                {/* {user.name} */}
+              </p>
+              <p>
+                Email:
+                {/* {user.email} */}
+              </p>
+              {/* <p>{`Joined ${new Date(user.created).toDateString()}`}</p> */}
+            </div>
+
+            <div className="d-inline-block">
+              <Link
+                className="btn btn-raised btn-info mr-5"
+                to="/private/create-post"
+
+                // to={`/user/edit/${user._id}`}
+              >
+                Create Post
+              </Link>
+
+              <Link
+                variant="outline-info"
+                className="btn btn-raised mr-5"
+                to="/private/update-profile"
+                // to={`/user/edit/${user._id}`}
+              >
+                Edit Profile
+              </Link>
+              {/* <DeleteUser userId={user._id} /> */}
+            </div>
+            {/* } */}
+          </div>
+        </div>
+
+        <div className="container">
+          <h1>Posts will go here</h1>
+          <Posts />
+        </div>
       </div>
     </div>
   </Layout>
