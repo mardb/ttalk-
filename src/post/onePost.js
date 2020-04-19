@@ -288,6 +288,97 @@ handleEdit = (...props) => {
 onClick= (event) => {
   
 }
+          const payload = { title, body, user, created };
+
+
+title: this.state.title, 
+body: this.state.body,
+    user: this.state.user,
+    created: this.state.created
+}
+
+  state= {
+    title: "", 
+    body: "",
+    user: "",
+    created: ""
+  }
+
+
+handleEdit = (...props) => {
+  this.setState({[event.target.name]: event.target.value})
+}
+
+onSubmit= (event) => {
+event.preventDefault();
+body: this.state.body,
+    user: this.state.user,
+    created: this.state.created
+}
+
+  state= {
+    title: "", 
+    body: "",
+    user: "",
+    created: ""
+  }
+
+
+handleEdit = (...props) => {
+  this.setState({[event.target.name]: event.target.value})
+}
+
+onSubmit= (event) => {
+event.preventDefault();
+title: this.state.title, 
+body: this.state.body,
+    user: this.state.user,
+    created: this.state.created
+}
+
+  state= {
+    title: "", 
+    body: "",
+    user: "",
+    created: ""
+  }
+
+
+handleEdit = (...props) => {
+  this.setState({
+    title, 
+    body, 
+    user, 
+    created,
+  })
+
+}
+
+onClick= (event) => {
+  
+}
+
+  state= {
+    title: "", 
+    body: "",
+    user: "",
+    created: ""
+  }
+
+
+handleEdit = (...props) => {
+  this.setState({
+    title, 
+    body, 
+    user, 
+    created,
+  })
+
+}
+
+onClick= (event) => {
+  
+}
 }
 
 onClick= (event) => {
