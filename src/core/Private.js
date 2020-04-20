@@ -16,11 +16,10 @@ console.log({Posts})
 const Private = () => (
   <Layout>
     <div className="container">
-      <h2 className="mt-5 mb-5">Profile</h2>
       <div>
         <div className="jumbotron text-center">
-          <h2>Tea Talk</h2>
-          <p className="lead">Welcome To Your Safe Heaven</p>
+          <h2>Welcome!</h2>
+          <p className="lead"></p>
         </div>
         <div className="row">
           <div className="col-md-4">
@@ -33,11 +32,11 @@ const Private = () => (
           <div className="col-md-8">
             <div className="lead mt-2">
               <p>
-                Hello
+                Hello Marlene!
                 {/* {user.name} */}
               </p>
               <p>
-                Email:
+                Email: guzmanmarlene@yahoo.com
                 {/* {user.email} */}
               </p>
               {/* <p>{`Joined ${new Date(user.created).toDateString()}`}</p> */}
@@ -71,7 +70,7 @@ const Private = () => (
         </div>
 
         <div className="container">
-          <h1>Posts will go here</h1>
+        
           <Posts />
         </div>
       </div>

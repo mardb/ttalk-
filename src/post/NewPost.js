@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import {createPost} from '../auth/PostsAPI';
 
 const NewPost = () => {
@@ -13,7 +13,6 @@ const NewPost = () => {
       title, 
       body,
     })
-    
   }
 
   return (
@@ -38,10 +37,11 @@ const NewPost = () => {
           />
         </div>
 
-        <button className="btn btn-raised btn-info" onClick={event => submitClick(event)} 
-        >
+        <button  href="/private" className="btn btn-raised btn-info" onClick={event => submitClick(event)} 
+        > 
           Create Post
         </button>
+        
         <Link className="btn btn-raised btn-danger mr-5" to="/private">
           cancel
         </Link>

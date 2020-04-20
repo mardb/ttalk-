@@ -1,15 +1,14 @@
-const BASE_URL = "http://localhost:4000";
-const POSTS = '/posts';
-const POST = '/post';
+const endpoint = "http://localhost:4000/posts";
+const endpoint2 = "http://localhost:4000/post";
 
 export const index = () => {
-  return fetch(BASE_URL + POSTS)
+  return fetch(endpoint)
     .then(res => res.json())
     .catch(err => console.log(err))
 }
 
 export const update = (post) => {
-  return fetch(`${BASE_URL}${POST}/${post._id}`, {
+  return fetch(`${endpoint2}/${post._id}`, {
     withCredentials: true,
     method: 'PUT',
     headers: {
@@ -17,12 +16,15 @@ export const update = (post) => {
     },
     body: JSON.stringify(post)
   })
-  .then(res => res.json())
+  .then(res => {
+    console.log('res', res)
+    res.json()
+  })
   .catch(err => console.log(err))
 }
 
 export const deletePost = (post) => {
-  return fetch(`${BASE_URL}${POSTS}/${post._id}`, {
+  return fetch(`${endpoint2}/${post._id}`, {
     credentials: 'include',
     method: 'DELETE'
   })
@@ -32,7 +34,8 @@ export const deletePost = (post) => {
 
 export const createPost = (newPost) => {
   console.log('new post', newPost)
-  return fetch(BASE_URL + POST, {
+  return fetch(`${endpoint2}`, {
+    //redntials: 'include',
     withCredentials: true,
     method: 'POST',
     headers: {
@@ -40,7 +43,10 @@ export const createPost = (newPost) => {
     },
     body: JSON.stringify(newPost)
   })
-    .then(res => res.json())
+    .then(res => {
+      console.log('create post', res)
+      res.json()
+    })
     .catch(err => console.log(err))
 }
 

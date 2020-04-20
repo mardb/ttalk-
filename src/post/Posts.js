@@ -7,7 +7,7 @@ class Posts extends Component {
     selectedPost: {
       title: '',
       body: '',
-    },
+    }
   };
   //component did mount that makes an API call to the function that returns all posts
   // and set state get info and set state
@@ -237,36 +237,36 @@ class Posts extends Component {
 
                       {/*  */}
                       <div
-                        class="modal fade"
+                        className="modal fade"
                         id="exampleModalLong"
-                        tabindex="-1"
+                        tabIndex="-1"
                         role="dialog"
                         aria-labelledby="exampleModalLongTitle"
                         aria-hidden="true"
                       >
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
+                        <div className="modal-dialog" role="document">
+                          <div className="modal-content">
+                            <div className="modal-header">
                               <h5
-                                class="modal-title"
+                                className="modal-title"
                                 id="exampleModalLongTitle"
                               >
                                 {this.state.selectedPost.title}
                               </h5>
                               <button
                                 type="button"
-                                class="close"
+                                className="close"
                                 data-dismiss="modal"
                                 aria-label="Close"
                               >
                                 <span aria-hidden="true">&times;</span>
                               </button>
                             </div>
-                            <div class="modal-body">{this.state.selectedPost.body}</div>
-                            <div class="modal-footer">
+                            <div className="modal-body">{this.state.selectedPost.body}</div>
+                            <div className="modal-footer">
                               <button
                                 type="button"
-                                class="btn btn-secondary"
+                                className="btn btn-secondary"
                                 data-dismiss="modal"
                               >
                                 Close
@@ -293,82 +293,11 @@ class Posts extends Component {
                   </div>
                 </div>
               </div>
-
-              //
-
-              //   <div className="container">
-
-              //   <div cont className="row ">
-              //   <div className="card col-md-4 mb-3">
-              //     <div className="card-body">
-              //       <img
-              //         src={require("../images/comingsoon.png")}
-              //         className="img-thunbnail mb-3"
-              //         style={{ height: "200px", width: "100%" }}
-              //       />
-              //       <h5 className="card-title">{post.title}</h5>
-              //       <p className="card-text">{post.body}Y</p>
-              //       <br />
-              //       <p className="font-italic mark">
-              //         Posted by Martha Stewart
-              //         <Link to="/private/single-post"> Link to Post </Link>
-              //         on 4/15/2020
-              //       </p>
-              //       <Link
-              //         to="/private/single-post"
-              //         className="btn btn-raised btn-primary btn-sm"
-              //       >
-              //         Read more
-              //       </Link>
-              //     </div>
-              //   </div>
-              //   {/*  */}
-              // </div>
-              // </div>
             );
           })}
       </div>
     );
   }
-
-  //     let posts = this.state.posts;
-  //     { posts &&
-  //       posts.map((post) => {
-  //       return (
-  //         <div className="container">
-
-  //         <div cont className="row ">
-  //         <div className="card col-md-4 mb-3">
-  //           <div className="card-body">
-  //             <img
-  //               src={require("../images/comingsoon.png")}
-  //               className="img-thunbnail mb-3"
-  //               style={{ height: "200px", width: "100%" }}
-  //             />
-  //             <h5 className="card-title">{post.title}</h5>
-  //             <p className="card-text">POST BODY</p>
-  //             <br />
-  //             <p className="font-italic mark">
-  //               Posted by Martha Stewart
-  //               <Link to="/private/single-post"> Link to Post </Link>
-  //               on 4/15/2020
-  //             </p>
-  //             <Link
-  //               to="/private/single-post"
-  //               className="btn btn-raised btn-primary btn-sm"
-  //             >
-  //               Read more
-  //             </Link>
-  //           </div>
-  //         </div>
-  //         {/*  */}
-  //       </div>
-  //       </div>
-  //       )
-  //     }
-
-  // )
-  // }
 }
 
 

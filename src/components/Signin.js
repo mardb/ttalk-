@@ -26,7 +26,7 @@ const Signin = ({ history }) => {
     authenticate(response, () => {
       isAuth() && isAuth().role === "private"
         ? history.push("/private")
-        : console.log("please chec inform parent error");
+        : console.log("please check inform parent error");
     });
   };
 
