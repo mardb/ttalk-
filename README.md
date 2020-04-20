@@ -70,14 +70,15 @@ A community for anyone who identifies as a woman to read articles involving wome
 
 ## Wireframes
 
-* **[Wireframes](#https://trello.com/b/h1rq0aWe/project-gemini):** What is this project?
-
+* ** <a href="https://trello.com/b/h1rq0aWe/project-gemini" target="_blank">Trello</a>
+#https://github.com/mardb/ttalk-frontend
 ---
 
 ## Repositories
 
-* **[Front-End](#https://github.com/mardb/ttalk-frontend):** What is this project?
-* **[Back-end](#https://github.com/mardb/ttalk-backend):** What should I focus on?
+* **[Front-End]<a href="" target="_blank">Github Repo FE</a>
+<a href="https://github.com/mardb/ttalk-backend" target="_blank">Github Repo FE</a>
+* **[Back-end]<a href="https://github.com/mardb/ttalk-backend" target="_blank">Github Repo BE</a>
 
 <!-- ----------------------------- -->
 <img src="../client/public/Comingsoon.gif" alt="" style="max-width:60%;" /> 
