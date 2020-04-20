@@ -31,7 +31,7 @@ const Routes = () => {
         <Route path='/auth/reset-password' exact component={ResetPassword} />
         <Route path='/private/update-profile' exact component={UpdatePrivate} />
         <Route path='/private/create-post' exact component={NewPost} />
-        <Route path='/private/single-post' exact component={OnePost}/>
+        {/* <Route path='/private/single-post' exact component={OnePost}/> */}
       </Switch>
     </BrowserRouter>
   );

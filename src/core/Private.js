@@ -9,6 +9,95 @@ import "react-toastify/dist/ReactToastify.min.css";
 import NewPost from "../post/NewPost";
 // import { css } from "glamor";
 
+
+
+console.log({Posts})
+
+const Private = () => (
+  <Layout>
+    <div className="container">
+      <h2 className="mt-5 mb-5">Profile</h2>
+      <div>
+        <div className="jumbotron text-center">
+          <h2>Tea Talk</h2>
+          <p className="lead">Welcome To Your Safe Heaven</p>
+        </div>
+        <div className="row">
+          <div className="col-md-4">
+            <img
+              src={require("../images/imageedit_1_4006947766.png")}
+              style={{ height: "200px", width: "auto" }}
+            />
+          </div>
+
+          <div className="col-md-8">
+            <div className="lead mt-2">
+              <p>
+                Hello
+                {/* {user.name} */}
+              </p>
+              <p>
+                Email:
+                {/* {user.email} */}
+              </p>
+              {/* <p>{`Joined ${new Date(user.created).toDateString()}`}</p> */}
+            </div>
+
+            <div className="d-inline-block">
+              <Link
+                className="btn btn-raised btn-info mr-5"
+                to="/private/create-post"
+
+                // to={`/user/edit/${user._id}`}
+              >
+                Create Post
+              </Link>
+               {/*  */}
+                
+               {/*  */}
+
+              <Link
+                variant="outline-info"
+                className="btn btn-raised mr-5"
+                to="/private/update-profile"
+                // to={`/user/edit/${user._id}`}
+              >
+                Edit Profile
+              </Link>
+              {/* <DeleteUser userId={user._id} /> */}
+            </div>
+            {/* } */}
+          </div>
+        </div>
+
+        <div className="container">
+          <h1>Posts will go here</h1>
+          <Posts />
+        </div>
+      </div>
+    </div>
+  </Layout>
+);
+
+export default Private;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ignore
+
+
 // const Private = (history) => {
 //   const [values, setValues] = useState({
 //     role: "",
@@ -177,68 +266,5 @@ import NewPost from "../post/NewPost";
 
 // export default Private;
 
-const Private = () => (
-  <Layout>
-    <div className="container">
-      <h2 className="mt-5 mb-5">Profile</h2>
-      <h1>I am the signed in user. this is my home page. </h1>
-      <div>
-        <div className="jumbotron text-center">
-          <h2>Home</h2>
-          <p className="lead">Welcome to my Blog</p>
-        </div>
-        <div className="row">
-          <div className="col-md-4">
-            <img
-              src={require("../images/imageedit_1_4006947766.png")}
-              style={{ height: "200px", width: "auto" }}
-            />
-          </div>
 
-          <div className="col-md-8">
-            <div className="lead mt-2">
-              <p>
-                Hello
-                {/* {user.name} */}
-              </p>
-              <p>
-                Email:
-                {/* {user.email} */}
-              </p>
-              {/* <p>{`Joined ${new Date(user.created).toDateString()}`}</p> */}
-            </div>
 
-            <div className="d-inline-block">
-              <Link
-                className="btn btn-raised btn-info mr-5"
-                to="/private/create-post"
-
-                // to={`/user/edit/${user._id}`}
-              >
-                Create Post
-              </Link>
-
-              <Link
-                variant="outline-info"
-                className="btn btn-raised mr-5"
-                to="/private/update-profile"
-                // to={`/user/edit/${user._id}`}
-              >
-                Edit Profile
-              </Link>
-              {/* <DeleteUser userId={user._id} /> */}
-            </div>
-            {/* } */}
-          </div>
-        </div>
-
-        <div className="container">
-          <h1>Posts will go here</h1>
-          <Posts />
-        </div>
-      </div>
-    </div>
-  </Layout>
-);
-
-export default Private;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from './core/Layout'
 import './App.css'
+// import Posts from './post/Posts'
 
 const App = () => {
   return (
