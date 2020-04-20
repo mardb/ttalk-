@@ -23,9 +23,9 @@ export const update = (post) => {
   .catch(err => console.log(err))
 }
 
-export const deletePost = (post) => {
-  return fetch(`${endpoint2}/${post._id}`, {
-    credentials: 'include',
+export const deletePost = (_id) => {
+  return fetch(`${endpoint2}/${_id}`, {
+    withCredentials: true,
     method: 'DELETE'
   })
   .then(res => res.json())

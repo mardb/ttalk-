@@ -49,10 +49,6 @@ class Posts extends Component {
     this.setState({editingPost: post})
   }
 
-  handleUpdate(id) {
-    //Show a modal
-    // Modal's update btn will make an apia call to db
-  }
 
   handleChange = (event) => {
     this.setState({
