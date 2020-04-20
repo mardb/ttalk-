@@ -76,9 +76,8 @@ A community for anyone who identifies as a woman to read articles involving wome
 
 ## Repositories
 
-* [Front-End]<a href="" target="_blank">Github Repo FE</a>
-<a href="https://github.com/mardb/ttalk-backend" target="_blank">Github Repo FE</a>
-* [Back-end]<a href="https://github.com/mardb/ttalk-backend" target="_blank">Github Repo BE</a>
+* [Front-End] <a href="https://github.com/mardb/ttalk-frontend" target="_blank">Github Repo FE</a>
+* [Back-end] <a href="https://github.com/mardb/ttalk-backend" target="_blank">Github Repo BE</a>
 
 <!-- ----------------------------- -->
 <img src="../client/public/Comingsoon.gif" alt="" style="max-width:60%;" /> 
