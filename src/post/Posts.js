@@ -9,10 +9,6 @@ class Posts extends Component {
       body: '',
     }
   };
-  //component did mount that makes an API call to the function that returns all posts
-  // and set state get info and set state
-  // set State will trigger render.. so pass info to render function
-  //when i get info, iterate data. (posted By) change hardcoded data to the data from API response
 
   componentDidMount() {
     PostsAPI.index().then((res) => {
@@ -20,11 +16,6 @@ class Posts extends Component {
       this.setState({ posts: res.posts });
     });
   }
-
-// TODO
-  // - close the modal when the server returns
-// - show an error message if it can't update
-// - re-render the table with the latest posts information
 
   handleUpdate = (post) => {
  
@@ -78,27 +69,6 @@ class Posts extends Component {
     });
   };
   
-  // handleDelete(id){
-  //API call to delete route
-  //update the state  to trigger a render
-  // if Notification,  click delete post and refresh the page
-
-  // }
-
-
-  // createPost = (post) => {
-  //   let newPost = {
-  //     title: this.post.title,
-  //     body: this.state.body,
-  //   };
-  //   PostsAPI.createPost(newPost).then((res) => {
-  //     let post = this.state.post;
-  //     let newPosts = posts.push(res.data);
-  //     this.setState({ newPosts });
-  //   });
-  // };
-
-
   render() {
     //  render() {
     let posts = this.state.posts;
@@ -298,3 +268,39 @@ class Posts extends Component {
 
 
 export default Posts;
+
+
+
+  //component did mount that makes an API call to the function that returns all posts
+  // and set state get info and set state
+  // set State will trigger render.. so pass info to render function
+  //when i get info, iterate data. (posted By) change hardcoded data to the data from API response
+
+
+// TODO
+  // - close the modal when the server returns
+// - show an error message if it can't update
+// - re-render the table with the latest posts information
+
+
+
+  // handleDelete(id){
+  //API call to delete route
+  //update the state  to trigger a render
+  // if Notification,  click delete post and refresh the page
+
+  // }
+
+
+  // createPost = (post) => {
+  //   let newPost = {
+  //     title: this.post.title,
+  //     body: this.state.body,
+  //   };
+  //   PostsAPI.createPost(newPost).then((res) => {
+  //     let post = this.state.post;
+  //     let newPosts = posts.push(res.data);
+  //     this.setState({ newPosts });
+  //   });
+  // };
+

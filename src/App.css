@@ -13,6 +13,8 @@
   background-size: cover;
   margin: .5;
   overflow: hidden;
+  color: white;
+  text-shadow: rgb(7, 7, 7) 2px 0 20px;
 }
 /* .container{
   color: rgb(33, 43, 31); background: #4f6e68;

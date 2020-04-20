@@ -3,7 +3,6 @@ import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { isAuth, signout } from "../auth/helpers";
 
-
 const Layout = ({ match, children, history }) => {
   //path compares to history
   const isActive = (path) => {
@@ -43,14 +42,14 @@ const Layout = ({ match, children, history }) => {
         </Fragment>
       )}
 
-
-{isAuth() && isAuth().role === "subscriber" && (
+      {isAuth() && isAuth().role === "subscriber" && (
         <li className="nav-item">
-          <Link className='nav-link' style={isActive("/private")} to="/private"> {isAuth().name}</Link>
+          <Link className="nav-link" style={isActive("/private")} to="/private">
+            {" "}
+            {isAuth().name}
+          </Link>
         </li>
       )}
-  
-      
 
       {isAuth() && (
         <li className="nav-item">
@@ -63,7 +62,7 @@ const Layout = ({ match, children, history }) => {
               });
             }}
           >
-            Signout
+            Logout
           </span>
         </li>
       )}

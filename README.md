@@ -1,4 +1,88 @@
 
+# <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Project 4 - Final Project
+
+**Read this entire document before writing a line of code.**
+
+## Tea Talk
+
+###### Elevator Pitch
+
+A community for anyone who identifies as a woman to read articles involving women health of body mind and spirit. The information in curated by women who care about the wellbeing of other people. Everyone who is a part of this community is happy to share resources and information. The difference between Tea Talk and a google search is the people who make up this community. Our contributing community members and organizers are doctors, trainers, psychologists, lawyers and many other occupations.  They provide leadership, resources, professional advice to improve the all around health of women and girls all around the world. 
+
+---
+
+## Technologies
+
+* MongoDB
+* Express
+* Reactjs 
+* Node.js
+* JsonWebToken
+* Google Login
+* Bootstrap
+
+---
+
+## User Stories
+
+  * As a user I want to be able to sign up for an account
+  * As  a user I am able to create a new profile and update my information
+  * As a user I want to be able to log in or logout of an account
+  * As a user I want to create my posts
+  * As a user I want to read a post
+  * As a user I want to update a post
+  * As a user I want to delete a post
+  * As a user I want to connect with other people in my community 
+
+---
+
+## Future Features
+
+* Social Media Logins
+  * Instagram
+  * Facebook
+  * Linkedin 
+* Community groups based on topics
+* Community chat based on topics
+* Chat for individuals
+* Ability to message each other individally
+* Ability to comment and Like posts
+* Master Admins 
+  * admins will be able to moderate the community rooms
+  * admins can delete other people's posts
+  * admins can create community rooms
+  * admins can suspend people for not following community guidelines. 
+
+---
+
+## Dependencies
+
+* axios
+* Body Parser
+* cors
+* dotenv
+* express validator and jwt
+* glamor
+* google-auth-library
+* mongoose,
+*  morgan
+
+
+
+---
+
+## Wireframes
+
+* **[Wireframes](#https://trello.com/b/h1rq0aWe/project-gemini):** What is this project?
+
+---
+
+## Repositories
+
+* **[Front-End](#https://github.com/mardb/ttalk-frontend):** What is this project?
+* **[Back-end](#https://github.com/mardb/ttalk-backend):** What should I focus on?
+
+<!-- ----------------------------- -->
 <img src="../client/public/Comingsoon.gif" alt="" style="max-width:60%;" /> 
 
 

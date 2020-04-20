@@ -59,21 +59,3 @@ export const createPost = (newPost) => {
 
 
 
-
-
-// -
-
-// const postIndex = () => {
-//   fetch("http://localhost:4000/posts")
-//   .then(res => res.json())
-//   .catch(err => console.log(err))
-//  }
-
-//  export const update = () => {
-
-//  }
-
-// // export const 
-// export default {
-//   postIndex
-// }

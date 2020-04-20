@@ -38,7 +38,7 @@ export const removeLocalStorage = (key) => {
 };
 //delete local storage
 export const authenticate = (response, next) => {
-  console.log("Authentication response:", response);
+  // console.log("Authentication response:", response);
   setCookie("token", response.data.token);
   setLocalStorage("user", response.data.user);
   next();
@@ -68,7 +68,7 @@ export const signout = (next) => {
 //update user
 
 export const updateUser = (response, next) => {
-  console.log("Update user in localstorage helpers:", response);
+  // console.log("Update user in localstorage helpers:", response);
   if (typeof window !== "undefined") {
     let auth = JSON.parse(localStorage.getItem("user"));
     auth = response.data;

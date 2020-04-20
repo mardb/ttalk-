@@ -2,23 +2,19 @@ import React, { useState, useEffect } from "react";
 import Layout from "./Layout";
 import Posts from "../post/Posts";
 import axios from "axios";
-import { Redirect, Link } from "react-router-dom";
-// import { ToastContainer, toast } from "react-toastify";
+import { Link } from "react-router-dom";
+
 // import { isAuth, getCookie, signout, updateUser } from "../auth/helpers";
 import "react-toastify/dist/ReactToastify.min.css";
-import NewPost from "../post/NewPost";
-// import { css } from "glamor";
 
-
-
-console.log({Posts})
+console.log({ Posts });
 
 const Private = () => (
   <Layout>
     <div className="container">
       <div>
         <div className="jumbotron text-center">
-          <h2>Welcome!</h2>
+          <h2>Welcome To Tea Talk!</h2>
           <p className="lead"></p>
         </div>
         <div className="row">
@@ -51,9 +47,9 @@ const Private = () => (
               >
                 Create Post
               </Link>
-               {/*  */}
-                
-               {/*  */}
+              {/*  */}
+
+              {/*  */}
 
               <Link
                 variant="outline-info"
@@ -70,7 +66,6 @@ const Private = () => (
         </div>
 
         <div className="container">
-        
           <Posts />
         </div>
       </div>
@@ -80,22 +75,7 @@ const Private = () => (
 
 export default Private;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ignore
-
 
 // const Private = (history) => {
 //   const [values, setValues] = useState({
@@ -264,6 +244,3 @@ export default Private;
 // };
 
 // export default Private;
-
-
-
